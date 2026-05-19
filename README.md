@@ -1,7 +1,8 @@
-# Parkinsonian-Tremor
+## Parkinsonian-Tremor
 Utilizaré la base de datos TremorDB junto con un autocodificador variacional condicional (CVAE) para generar señales fisiológicas temporales de alta calidad en escenarios de pocos datos. Como punto de partida de mi tesis doctoral, estoy trabajando con el conjunto de datos TremorDB (PhysioNet), que contiene registros de temblor en reposo de 16 pacientes con enfermedad de Parkinson bajo diferentes condiciones de estimulación cerebral profunda (ECP) y tratamiento farmacológico. El objetivo principal es desarrollar un modelo de Autoencoder Variacional Condicional (CVAE) capaz de generar datos sintéticos de señales de temblor que sean estadísticamente coherentes con los datos reales. 
+
 Hasta ahora he completado las siguientes etapas:
-1.⁠ ⁠Diseño del pipeline completo: he estructurado el proyecto en cuatro fases (preparación de datos, construcción del modelo, evaluación y redacción del artículo).
-2.⁠ ⁠Preparación del código para la Fase 1: he desarrollado un notebook en Google Colab para la carga, visualización y segmentación de las señales. Actualmente estoy resolviendo algunos problemas relacionados con el formato específico del conjunto de datos (archivos .let/.rit de PhysioNet).
-3.⁠ ⁠Arquitectura del modelo definida: el CVAE incluye un codificador CNN-1D, un espacio latente de 32 dimensiones con embeddings condicionales (estado ECP, medicación, subtipo HAT/LAT, diana de estimulación) y un decodificador con convoluciones transpuestas. La función de pérdida combina MSE de reconstrucción, divergencia KL y una pérdida espectral FFT ponderada en la banda de temblor (4–6 Hz).
+#1.⁠ ⁠Diseño del pipeline completo: he estructurado el proyecto en cuatro fases (preparación de datos, construcción del modelo, evaluación y redacción del artículo).
+#2.⁠ ⁠Preparación del código para la Fase 1: he desarrollado un notebook en Google Colab para la carga, visualización y segmentación de las señales. Actualmente estoy resolviendo algunos problemas relacionados con el formato específico del conjunto de datos (archivos .let/.rit de PhysioNet).
+#3.⁠ ⁠Arquitectura del modelo definida: el CVAE incluye un codificador CNN-1D, un espacio latente de 32 dimensiones con embeddings condicionales (estado ECP, medicación, subtipo HAT/LAT, diana de estimulación) y un decodificador con convoluciones transpuestas. La función de pérdida combina MSE de reconstrucción, divergencia KL y una pérdida espectral FFT ponderada en la banda de temblor (4–6 Hz).
 
